@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  dev:
+    image: dockervs:latest
+    build: 
+      context: .
+      dockerfile: .Dockerfile
+    volumes:
+      - ./source_code:/root/code
+    #   - ./:/root/code
+      - .vscode-server:/root/.vscode-server # map to the container
